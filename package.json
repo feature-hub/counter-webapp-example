@@ -1,7 +1,7 @@
 {
-  "name": "parcel-sandbox",
+  "name": "feature-hub-counter",
   "version": "1.0.0",
-  "description": "Simple Parcel Sandbox",
+  "description": "A Feature Hub counter web app",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
@@ -12,8 +12,8 @@
     "@feature-hub/module-loader": "0.3.0",
     "@feature-hub/react": "0.3.0",
     "nanoevents": "1.0.8",
-    "react": "16.6.3",
-    "react-dom": "16.6.3"
+    "react": "16.7.0-alpha.2",
+    "react-dom": "16.7.0-alpha.2"
   },
   "devDependencies": {
     "parcel-bundler": "^1.6.1"

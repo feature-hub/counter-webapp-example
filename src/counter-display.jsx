@@ -1,29 +1,13 @@
 import * as React from 'react';
 
-class CounterDisplay extends React.Component {
-  constructor() {
-    super();
+const {useEffect, useState} = React;
 
-    this.state = {count: 0};
-  }
+function CounterDisplay({counter}) {
+  const [count, setCount] = useState(counter.count);
 
-  componentDidMount() {
-    const {counter} = this.props;
+  useEffect(() => counter.subscribe(() => setCount(counter.count)), [counter]);
 
-    this.unsubscribe = counter.subscribe(() => {
-      this.setState({count: counter.count});
-    });
-  }
-
-  componentWillUnmount() {
-    if (this.unsubscribe) {
-      this.unsubscribe();
-    }
-  }
-
-  render() {
-    return <div>{this.state.count}</div>;
-  }
+  return <div>{count}</div>;
 }
 
 export default {
