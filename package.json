@@ -8,8 +8,9 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "@feature-hub/core": "0.2.0",
-    "@feature-hub/react": "0.2.0"
+    "@feature-hub/core": "0.3.0",
+    "@feature-hub/module-loader": "0.3.0",
+    "@feature-hub/react": "0.3.0"
   },
   "devDependencies": {
     "parcel-bundler": "^1.6.1"
