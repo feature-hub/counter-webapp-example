@@ -1,3 +1,12 @@
+function createButton(title, onClick) {
+  const button = document.createElement('button');
+
+  button.innerHTML = title;
+  button.onclick = onClick;
+
+  return button;
+}
+
 export default {
   id: 'example:counter-control',
 
@@ -10,19 +19,8 @@ export default {
 
     return {
       attachTo(container) {
-        const minusButton = document.createElement('button');
-
-        minusButton.innerHTML = '-';
-        minusButton.onclick = () => counterV1.decrement();
-
-        container.appendChild(minusButton);
-
-        const plusButton = document.createElement('button');
-
-        plusButton.innerHTML = '+';
-        plusButton.onclick = () => counterV1.increment();
-
-        container.appendChild(plusButton);
+        container.appendChild(createButton('-', () => counterV1.decrement()));
+        container.appendChild(createButton('+', () => counterV1.increment()));
       }
     };
   }

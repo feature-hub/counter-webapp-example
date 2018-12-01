@@ -1,14 +1,27 @@
 class CounterV1 {
   constructor() {
     this.count = 0;
+    this.listeners = [];
   }
 
   decrement() {
-    this.count -= 1;
+    this._update(this.count - 1);
   }
 
   increment() {
-    this.count += 1;
+    this._update(this.count + 1);
+  }
+
+  subscribe(listener) {
+    this.listeners.push(listener);
+  }
+
+  _update(count) {
+    this.count = count;
+
+    for (const listener of this.listeners) {
+      listener();
+    }
   }
 }
 
