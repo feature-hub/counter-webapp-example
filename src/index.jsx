@@ -3,7 +3,7 @@ import {loadAmdModule} from '@feature-hub/module-loader';
 import {FeatureAppContainer} from '@feature-hub/react';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import {counterDefinition} from './counter';
+import counterDefinition from './counter';
 import counterControlDefinition from './counter-control';
 import counterDisplayDefinition from './counter-display';
 

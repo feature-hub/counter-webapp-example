@@ -1,31 +1,30 @@
+import NanoEvents from 'nanoevents';
+
 class CounterV1 {
   constructor() {
     this.count = 0;
-    this.listeners = [];
+    this.emitter = new NanoEvents();
   }
 
   decrement() {
-    this._update(this.count - 1);
+    this.update(this.count - 1);
   }
 
   increment() {
-    this._update(this.count + 1);
+    this.update(this.count + 1);
   }
 
   subscribe(listener) {
-    this.listeners.push(listener);
+    return this.emitter.on('update', listener);
   }
 
-  _update(count) {
+  update(count) {
     this.count = count;
-
-    for (const listener of this.listeners) {
-      listener();
-    }
+    this.emitter.emit('update');
   }
 }
 
-export const counterDefinition = {
+export default {
   id: 'example:counter',
 
   create: () => {

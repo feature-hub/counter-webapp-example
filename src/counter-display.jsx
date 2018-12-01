@@ -10,9 +10,15 @@ class CounterDisplay extends React.Component {
   componentDidMount() {
     const {counter} = this.props;
 
-    counter.subscribe(() => {
+    this.unsubscribe = counter.subscribe(() => {
       this.setState({count: counter.count});
     });
+  }
+
+  componentWillUnmount() {
+    if (this.unsubscribe) {
+      this.unsubscribe();
+    }
   }
 
   render() {

@@ -11,6 +11,7 @@
     "@feature-hub/core": "0.3.0",
     "@feature-hub/module-loader": "0.3.0",
     "@feature-hub/react": "0.3.0",
+    "nanoevents": "1.0.8",
     "react": "16.6.3",
     "react-dom": "16.6.3"
   },
