@@ -6,6 +6,7 @@ import {
 
 export interface CounterV1 {
   getCount(): number;
+  decrement(): void;
   increment(): void;
 }
 
@@ -18,6 +19,10 @@ class CounterV1Impl implements CounterV1 {
 
   public getCount(): number {
     return this.count;
+  }
+
+  public decrement(): void {
+    this.count -= 1;
   }
 
   public increment(): void {
