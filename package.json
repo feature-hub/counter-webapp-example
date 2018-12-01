@@ -1,0 +1,17 @@
+{
+  "name": "parcel-sandbox",
+  "version": "1.0.0",
+  "description": "Simple Parcel Sandbox",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "@feature-hub/core": "0.2.0",
+    "@feature-hub/react": "0.2.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.6.1"
+  }
+}
