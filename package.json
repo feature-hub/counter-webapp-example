@@ -1,21 +1,21 @@
 {
-  "name": "feature-hub-counter",
+  "name": "counter-webapp-example",
   "version": "1.0.0",
-  "description": "A Feature Hub counter web app",
+  "description": "A Feature Hub counter web app example.",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "@feature-hub/core": "0.3.0",
-    "@feature-hub/module-loader": "0.3.0",
-    "@feature-hub/react": "0.3.0",
+    "@feature-hub/core": "0.11.0",
+    "@feature-hub/module-loader-amd": "0.11.0",
+    "@feature-hub/react": "0.11.0",
     "nanoevents": "1.0.8",
     "react": "16.7.0-alpha.2",
     "react-dom": "16.7.0-alpha.2"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.6.1"
+    "parcel-bundler": "^1.11.0"
   }
 }

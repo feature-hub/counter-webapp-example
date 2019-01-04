@@ -1,5 +1,5 @@
 import {FeatureAppManager, FeatureServiceRegistry} from '@feature-hub/core';
-import {loadAmdModule} from '@feature-hub/module-loader';
+import {loadAmdModule} from '@feature-hub/module-loader-amd';
 import {FeatureAppContainer} from '@feature-hub/react';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -9,7 +9,10 @@ import counterDisplayDefinition from './counter-display';
 
 const registry = new FeatureServiceRegistry({});
 
-registry.registerProviders([counterDefinition], 'counter-web-app');
+registry.registerFeatureServices(
+  [counterDefinition],
+  'example:counter-web-app'
+);
 
 const manager = new FeatureAppManager(registry, loadAmdModule);
 
