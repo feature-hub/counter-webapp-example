@@ -15,12 +15,12 @@ export default {
   },
 
   create(env) {
-    const counterV1 = env.featureServices['example:counter'];
+    const counter = env.featureServices['example:counter'];
 
     return {
       attachTo(container) {
-        container.appendChild(createButton('-', () => counterV1.decrement()));
-        container.appendChild(createButton('+', () => counterV1.increment()));
+        container.appendChild(createButton('-', () => counter.decrement()));
+        container.appendChild(createButton('+', () => counter.increment()));
       }
     };
   }

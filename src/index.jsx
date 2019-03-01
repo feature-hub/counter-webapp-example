@@ -6,6 +6,7 @@ import * as ReactDOM from 'react-dom';
 import counterDefinition from './counter';
 import counterControlDefinition from './counter-control';
 import counterDisplayDefinition from './counter-display';
+import counterResetDefinition from './counter-reset';
 
 const registry = new FeatureServiceRegistry({});
 
@@ -21,6 +22,10 @@ ReactDOM.render(
     <FeatureAppContainer
       manager={manager}
       featureAppDefinition={counterControlDefinition}
+    />
+    <FeatureAppContainer
+      manager={manager}
+      featureAppDefinition={counterResetDefinition}
     />
     <FeatureAppContainer
       manager={manager}

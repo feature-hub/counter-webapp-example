@@ -1,13 +1,15 @@
 import * as React from 'react';
-
-const {useEffect, useState} = React;
+import useCounter from './use-counter';
 
 function CounterDisplay({counter}) {
-  const [count, setCount] = useState(counter.count);
+  const {count, updaterId} = useCounter(counter);
 
-  useEffect(() => counter.subscribe(() => setCount(counter.count)), [counter]);
-
-  return <div>{count}</div>;
+  return (
+    <div>
+      <div>{count}</div>
+      {updaterId ? <div>Last Update by: {updaterId}</div> : null}
+    </div>
+  );
 }
 
 export default {
@@ -18,10 +20,10 @@ export default {
   },
 
   create(env) {
-    const counterV1 = env.featureServices['example:counter'];
+    const counter = env.featureServices['example:counter'];
 
     return {
-      render: () => <CounterDisplay counter={counterV1} />
+      render: () => <CounterDisplay counter={counter} />
     };
   }
 };
