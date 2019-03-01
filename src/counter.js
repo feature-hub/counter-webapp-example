@@ -54,7 +54,7 @@ export default {
     const sharedCounter = new CounterV1();
 
     return {
-      '1.0': uniqueConsumerId => ({
+      '1.0.0': uniqueConsumerId => ({
         featureService: new ConsumerCounterV1(sharedCounter, uniqueConsumerId)
       })
     };

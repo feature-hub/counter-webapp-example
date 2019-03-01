@@ -8,12 +8,12 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "@feature-hub/core": "0.11.0",
-    "@feature-hub/module-loader-amd": "0.11.0",
-    "@feature-hub/react": "0.11.0",
-    "nanoevents": "1.0.8",
-    "react": "16.7.0-alpha.2",
-    "react-dom": "16.7.0-alpha.2"
+    "@feature-hub/core": "^1.1.0",
+    "@feature-hub/module-loader-amd": "^1.1.0",
+    "@feature-hub/react": "^1.2.0",
+    "nanoevents": "^1.0.8",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
   },
   "devDependencies": {
     "parcel-bundler": "^1.11.0"

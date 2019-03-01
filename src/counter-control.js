@@ -11,7 +11,9 @@ export default {
   id: 'example:counter-control',
 
   dependencies: {
-    'example:counter': '^1.0'
+    featureServices: {
+      'example:counter': '^1.0.0'
+    }
   },
 
   create(env) {

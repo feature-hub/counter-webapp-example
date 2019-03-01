@@ -4,7 +4,9 @@ export default {
   id: 'example:counter-reset',
 
   dependencies: {
-    'example:counter': '^1.0'
+    featureServices: {
+      'example:counter': '^1.0.0'
+    }
   },
 
   create(env) {
